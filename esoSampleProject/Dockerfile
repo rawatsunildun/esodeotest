@@ -25,7 +25,7 @@
 #ENTRYPOINT ["dotnet", "esoSampleProject.dll"]
 
 
-FROM mcr.microsoft.com/dotnet/sdk:6.0-alpine as build
+FROM registry.redhat.io/rhel8/dotnet-60@sha256:7627f5600a2f904b3de72189240cd52bd493b71fef82c2c5fca07bfcec14962b as build
 
 EXPOSE 8080
 ENV ASPNETCORE_URLS=http://*:8080
@@ -35,7 +35,7 @@ COPY . .
 RUN dotnet restore
 RUN dotnet publish -o /app/published-app
 
-FROM mcr.microsoft.com/dotnet/aspnet:6.0-alpine as runtime
+FROM registry.redhat.io/rhel8/dotnet-60@sha256:7627f5600a2f904b3de72189240cd52bd493b71fef82c2c5fca07bfcec14962b as runtime
 WORKDIR /app
 COPY --from=build /app/published-app /app
 ENTRYPOINT [ "dotnet", "/app/esoSampleProject.dll" ]
