@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\esoSampleProject\\esoSampleProject\\esoSampleProject.csproj": {}
+    "D:\\Projects\\esoSampleProjectTest\\esoSampleProject\\esoSampleProject.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\esoSampleProject\\esoSampleProject\\esoSampleProject.csproj": {
+    "D:\\Projects\\esoSampleProjectTest\\esoSampleProject\\esoSampleProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\esoSampleProject\\esoSampleProject\\esoSampleProject.csproj",
+        "projectUniqueName": "D:\\Projects\\esoSampleProjectTest\\esoSampleProject\\esoSampleProject.csproj",
         "projectName": "esoSampleProject",
-        "projectPath": "D:\\Projects\\esoSampleProject\\esoSampleProject\\esoSampleProject.csproj",
+        "projectPath": "D:\\Projects\\esoSampleProjectTest\\esoSampleProject\\esoSampleProject.csproj",
         "packagesPath": "C:\\Users\\sunil.rawat\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\esoSampleProject\\esoSampleProject\\obj\\",
+        "outputPath": "D:\\Projects\\esoSampleProjectTest\\esoSampleProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sunil.rawat\\AppData\\Roaming\\NuGet\\NuGet.Config",

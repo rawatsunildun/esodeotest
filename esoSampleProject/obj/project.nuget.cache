@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TG4oyN6B4lGtxV+914TQJPGPAHx+PZdNdDFGdVoJqJpZoISYLUGUBhdLkomvkRABlH8Zrl7rOGkns4UcON05Vg==",
+  "dgSpecHash": "Vt1C3+VucM/sOAVbxybpfHKUe3WecJSkLQB7AJ95hX0/H2yY92TZV0Nav/gWm7fFrAvw5kXm+CY1I7YwJv8i1g==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\esoSampleProject\\esoSampleProject\\esoSampleProject.csproj",
+  "projectFilePath": "D:\\Projects\\esoSampleProjectTest\\esoSampleProject\\esoSampleProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sunil.rawat\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\sunil.rawat\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.0\\microsoft.extensions.configuration.6.0.0.nupkg.sha512",
