@@ -35,7 +35,7 @@ COPY . .
 RUN dotnet restore
 RUN dotnet publish -o /app/published-app
 
-FROM registry.redhat.io/rhel8/dotnet-60@sha256:7627f5600a2f904b3de72189240cd52bd493b71fef82c2c5fca07bfcec14962b as runtime
+FROM registry.redhat.io/rhel8/dotnet-60-runtime@sha256:5e9baa12b984f5b254b5318b7a3f8fb86e117766fe948f68777563ec666e3742 as runtime
 WORKDIR /app
 COPY --from=build /app/published-app /app
 ENTRYPOINT [ "dotnet", "/app/esoSampleProject.dll" ]
