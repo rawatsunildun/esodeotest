@@ -23,24 +23,18 @@
 #WORKDIR /app
 #COPY --from=publish /app/publish .
 #ENTRYPOINT ["dotnet", "esoSampleProject.dll"]
+#
 
-
-FROM registry.redhat.io/rhel8/dotnet-60@sha256:7627f5600a2f904b3de72189240cd52bd493b71fef82c2c5fca07bfcec14962b as build
-
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS build
 EXPOSE 8080
 ENV ASPNETCORE_URLS=http://*:8080
 
 WORKDIR /app
-
-RUN chown -R admin:admin /app
-RUN chmod 755 /app
-USER admin
-
 COPY . .
 RUN dotnet restore
 RUN dotnet publish -o /app/published-app
 
-FROM registry.redhat.io/rhel8/dotnet-60-runtime@sha256:5e9baa12b984f5b254b5318b7a3f8fb86e117766fe948f68777563ec666e3742 as runtime
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /app
 COPY --from=build /app/published-app /app
 ENTRYPOINT [ "dotnet", "/app/esoSampleProject.dll" ]
