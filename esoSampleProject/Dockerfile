@@ -31,6 +31,11 @@ EXPOSE 8080
 ENV ASPNETCORE_URLS=http://*:8080
 
 WORKDIR /app
+
+RUN chown -R admin:admin /app
+RUN chmod 755 /app
+USER admin
+
 COPY . .
 RUN dotnet restore
 RUN dotnet publish -o /app/published-app
