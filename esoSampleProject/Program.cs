@@ -1,4 +1,5 @@
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 
 
 ////getting configuration 
@@ -17,31 +18,34 @@ builder.Configuration.AddJsonFile("secrets/Secret.json", optional: true, reloadO
 //builder.Configuration.AddUserSecrets<Program>();
 builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
 
-
+builder.Services.AddMvc(options => options.EnableEndpointRouting = true);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-
-
+//builder.Services.AddSwaggerGen();
     
 
 var app = builder.Build();
 
+app.UseRouting();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseEndpoints(endpoints =>
+    {
+        endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}");
+    });
+    //app.UseSwagger();
+    //app.UseSwaggerUI();
 }
 
 //var name = app.Configuration["Name"];
 //var name1 = app.Configuration["Logging:LogLevel:Default"];
 
-app.UseHttpsRedirection();
 
-app.UseAuthorization();
+
+
+app.UseHttpsRedirection();
 
 app.MapControllers();
 

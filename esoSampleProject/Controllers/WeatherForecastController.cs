@@ -6,14 +6,14 @@ namespace esoSampleProject.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        private readonly IConfiguration _config;
+        
 
         private string[] Summaries = new[]
         {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
 
-      
+        private readonly IConfiguration _config;
 
         private readonly ILogger<WeatherForecastController> _logger;
 
