@@ -43,4 +43,4 @@ EXPOSE 8080
 ENV ASPNETCORE_URLS=http://+:8080
 
 COPY --from=build-env /App/out .
-ENTRYPOINT ["dotnet", "esoSampleProject.dll"]
+ENTRYPOINT ["dotnet", "/App/esoSampleProject.dll"]
