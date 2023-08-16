@@ -39,7 +39,7 @@ if (app.Environment.IsDevelopment())
     //app.UseSwaggerUI();
 }
 
-//var name = app.Configuration["Name"];
+var name = app.Configuration["firstname01"];
 //var name1 = app.Configuration["Logging:LogLevel:Default"];
 
 
