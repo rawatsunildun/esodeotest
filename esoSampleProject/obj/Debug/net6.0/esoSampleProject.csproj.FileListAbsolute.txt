@@ -261,3 +261,16 @@ D:\Projects\esoSampleProjectTest\esoSampleProject\bin\Debug\net6.0\runtimes\win\
 D:\Projects\esoSampleProjectTest\esoSampleProject\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\Projects\esoSampleProjectTest\esoSampleProject\obj\Debug\net6.0\esoSampleProject.RazorAssemblyInfo.cache
 D:\Projects\esoSampleProjectTest\esoSampleProject\obj\Debug\net6.0\esoSampleProject.RazorAssemblyInfo.cs
+D:\Projects\esoSampleProjectTest\esoSampleProject\bin\Debug\net6.0\Google.Protobuf.dll
+D:\Projects\esoSampleProjectTest\esoSampleProject\bin\Debug\net6.0\Grpc.Core.Api.dll
+D:\Projects\esoSampleProjectTest\esoSampleProject\bin\Debug\net6.0\Grpc.Net.Client.dll
+D:\Projects\esoSampleProjectTest\esoSampleProject\bin\Debug\net6.0\Grpc.Net.Common.dll
+D:\Projects\esoSampleProjectTest\esoSampleProject\bin\Debug\net6.0\OpenTelemetry.dll
+D:\Projects\esoSampleProjectTest\esoSampleProject\bin\Debug\net6.0\OpenTelemetry.Api.dll
+D:\Projects\esoSampleProjectTest\esoSampleProject\bin\Debug\net6.0\OpenTelemetry.Api.ProviderBuilderExtensions.dll
+D:\Projects\esoSampleProjectTest\esoSampleProject\bin\Debug\net6.0\OpenTelemetry.Exporter.Console.dll
+D:\Projects\esoSampleProjectTest\esoSampleProject\bin\Debug\net6.0\OpenTelemetry.Exporter.OpenTelemetryProtocol.dll
+D:\Projects\esoSampleProjectTest\esoSampleProject\bin\Debug\net6.0\OpenTelemetry.Extensions.Hosting.dll
+D:\Projects\esoSampleProjectTest\esoSampleProject\bin\Debug\net6.0\OpenTelemetry.Instrumentation.Runtime.dll
+D:\Projects\esoSampleProjectTest\esoSampleProject\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+D:\Projects\esoSampleProjectTest\esoSampleProject\bin\Debug\net6.0\OpenTelemetry.Exporter.Jaeger.dll

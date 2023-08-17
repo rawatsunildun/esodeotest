@@ -1,5 +1,12 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
+using Microsoft.Extensions.Logging.Console;
+using Microsoft.Extensions.Logging;
+using OpenTelemetry;
+using OpenTelemetry.Logs;
+using OpenTelemetry.Resources;
+using OpenTelemetry.Exporter;
+using OpenTelemetry.Metrics;
 
 
 ////getting configuration 
@@ -42,8 +49,21 @@ if (app.Environment.IsDevelopment())
 var name = app.Configuration["firstname01"];
 //var name1 = app.Configuration["Logging:LogLevel:Default"];
 
+//add opentelemetry custome loggin
 
 
+var appResourceBuilder= ResourceBuilder.CreateDefault().AddService("esoSampleProject","1.0");
+using var loggerFactory = LoggerFactory.Create(builder =>
+{
+    builder.AddOpenTelemetry(options =>
+    {
+        options.SetResourceBuilder(appResourceBuilder);
+        options.AddOtlpExporter(options =>
+        {
+            options.Endpoint = new Uri("http://otel-collector.otel.svc.cluster.local:4317");
+        });
+    });
+});
 
 app.UseHttpsRedirection();
 
