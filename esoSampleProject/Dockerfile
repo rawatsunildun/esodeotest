@@ -27,6 +27,7 @@
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
 WORKDIR /App
+EXPOSE 5000
 
 
 # Copy everything
@@ -39,8 +40,9 @@ RUN dotnet publish -c Release -o out
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /App
-EXPOSE 8080
-ENV ASPNETCORE_URLS=http://+:8080
+EXPOSE 5000
+ENV ASPNETCORE_URLS=http://+:5000
+ENV ASPNETCORE_ENVIRONMENT=Development
 
 COPY --from=build-env /App/out .
 ENTRYPOINT ["dotnet", "/App/esoSampleProject.dll"]

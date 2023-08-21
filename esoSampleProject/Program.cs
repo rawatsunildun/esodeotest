@@ -47,10 +47,10 @@ if (app.Environment.IsDevelopment())
     //app.UseSwaggerUI();
 }
 
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}");
-});
+//app.UseEndpoints(endpoints =>
+//{
+//    endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}");
+//});
 
 var name = app.Configuration["firstname01"];
 //var name1 = app.Configuration["Logging:LogLevel:Default"];
