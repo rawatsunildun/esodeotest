@@ -21,7 +21,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // configuration details
 builder.Configuration.AddJsonFile("appsettings.json",optional: false,reloadOnChange: true);
-builder.Configuration.AddJsonFile("secrets/Secret.json", optional: true, reloadOnChange: true);
+builder.Configuration.AddJsonFile("secrets/secrets.json", optional: true, reloadOnChange: true);
 //builder.Configuration.AddUserSecrets<Program>();
 builder.Services.AddSingleton<IConfiguration>(builder.Configuration);
 
@@ -33,6 +33,7 @@ builder.Services.AddEndpointsApiExplorer();
     
 
 var app = builder.Build();
+
 
 app.UseRouting();
 // Configure the HTTP request pipeline.
@@ -46,24 +47,29 @@ if (app.Environment.IsDevelopment())
     //app.UseSwaggerUI();
 }
 
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}");
+});
+
 var name = app.Configuration["firstname01"];
 //var name1 = app.Configuration["Logging:LogLevel:Default"];
 
 //add opentelemetry custome loggin
 
 
-var appResourceBuilder= ResourceBuilder.CreateDefault().AddService("esoSampleProject","1.0");
-using var loggerFactory = LoggerFactory.Create(builder =>
-{
-    builder.AddOpenTelemetry(options =>
-    {
-        options.SetResourceBuilder(appResourceBuilder);
-        options.AddOtlpExporter(options =>
-        {
-            options.Endpoint = new Uri("http://otel-collector.otel.svc.cluster.local:4317");
-        });
-    });
-});
+//var appResourceBuilder= ResourceBuilder.CreateDefault().AddService("esoSampleProject","1.0");
+//using var loggerFactory = LoggerFactory.Create(builder =>
+//{
+//    builder.AddOpenTelemetry(options =>
+//    {
+//        options.SetResourceBuilder(appResourceBuilder);
+//        options.AddOtlpExporter(options =>
+//        {
+//            options.Endpoint = new Uri("http://otel-collector.otel.svc.cluster.local:4317");
+//        });
+//    });
+//});
 
 app.UseHttpsRedirection();
 

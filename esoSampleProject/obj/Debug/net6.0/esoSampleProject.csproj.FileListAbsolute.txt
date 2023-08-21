@@ -34,7 +34,6 @@ D:\Projects\esoSampleProject\esoSampleProject\bin\Debug\net6.0\Microsoft.Extensi
 D:\Projects\esoSampleProject\esoSampleProject\bin\Debug\net6.0\secrets\Secret.json
 D:\Projects\esoSampleProjectTest\esoSampleProject\bin\Debug\net6.0\appsettings.Development.json
 D:\Projects\esoSampleProjectTest\esoSampleProject\bin\Debug\net6.0\appsettings.json
-D:\Projects\esoSampleProjectTest\esoSampleProject\bin\Debug\net6.0\secrets\Secret.json
 D:\Projects\esoSampleProjectTest\esoSampleProject\bin\Debug\net6.0\esoSampleProject.exe
 D:\Projects\esoSampleProjectTest\esoSampleProject\bin\Debug\net6.0\esoSampleProject.deps.json
 D:\Projects\esoSampleProjectTest\esoSampleProject\bin\Debug\net6.0\esoSampleProject.runtimeconfig.json
@@ -274,3 +273,4 @@ D:\Projects\esoSampleProjectTest\esoSampleProject\bin\Debug\net6.0\OpenTelemetry
 D:\Projects\esoSampleProjectTest\esoSampleProject\bin\Debug\net6.0\OpenTelemetry.Instrumentation.Runtime.dll
 D:\Projects\esoSampleProjectTest\esoSampleProject\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
 D:\Projects\esoSampleProjectTest\esoSampleProject\bin\Debug\net6.0\OpenTelemetry.Exporter.Jaeger.dll
+D:\Projects\esoSampleProjectTest\esoSampleProject\bin\Debug\net6.0\secrets\secrets.json
